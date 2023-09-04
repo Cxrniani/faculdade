@@ -8,7 +8,6 @@ public class Date {
 
 	public void setDia(int dia) {
 		if(dia > 31 || dia <= 0) {
-			System.out.print("Data inválida, dia inexistente\n");
 			this.dia = 00;
 		}
 		else {
@@ -22,7 +21,6 @@ public class Date {
 
 	public void setMes(int mes) {
 		if(mes > 12 || mes <= 0) {
-			System.out.print("Data inválida, mês inexistente\n");
 			this.mes = 00;
 		}
 		else {
@@ -49,6 +47,10 @@ public class Date {
 	}
 
 	public String nextDay() {
+		if(dia == 00 || mes == 00){
+			return "Impossível determinar a data de amanhã, dia e/ou mês inexistentes\n";
+		}
+		else {
 		if(dia == 31 && mes < 12) {
 			return "Data de amanhã: "+1 + "/" + (getMes()+1) + "/" + getAno() + "\n";
 		}
@@ -58,10 +60,16 @@ public class Date {
 		else {
 			return "Data de amanhã: "+(getDia()+1) + "/" + getMes() + "/" + getAno() + "\n";
 		}
+		}
 	}
 
 	public String displayDate() {
+		if(dia == 00 || mes == 00){
+			return "Impossível mostrar a data de hoje, dia e/ou mês inexistentes\n";
+		}
+		else {
 		return "Data de hoje: "+getDia() + "/" + getMes() + "/" + getAno() + "\n";
+		}
 	}
 	
 
