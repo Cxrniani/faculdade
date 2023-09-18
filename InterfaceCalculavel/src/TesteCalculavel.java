@@ -2,12 +2,14 @@
 public class TesteCalculavel {
 
 	public static void main(String[] args) {
+	int i = 0;	
+		
 	Calculavel[] calc = new Calculavel[5];
-	Quadrado q1 = new Quadrado(10);
-	Retangulo r1 = new Retangulo(15,20);
-	Circulo c1 = new Circulo(5);
-	Quadrado q2 = new Quadrado(5);
-	Circulo c2 = new Circulo(10);
+	Calculavel q1 = new Quadrado(10);
+	Calculavel r1 = new Retangulo(15,20);
+	Calculavel c1 = new Circulo(5);
+	Calculavel q2 = new Quadrado(5);
+	Calculavel c2 = new Circulo(10);
 	
 	
 	calc[0] = q1;
@@ -16,17 +18,16 @@ public class TesteCalculavel {
 	calc[3] = q2;
 	calc[4] = c2;
 	
-	System.out.println(calc[0].calculaArea());
-	System.out.println(calc[1].calculaArea());
-	System.out.println(calc[2].calculaArea());
-	System.out.println(calc[3].calculaArea());
-	System.out.println(calc[4].calculaArea());
+	while(i<calc.length) {
+	System.out.println(calc[i].calculaArea());
+	i++;
+	}
 	System.out.println("\n");
-	System.out.println(calc[0].calculaPerimetro());
-	System.out.println(calc[1].calculaPerimetro());
-	System.out.println(calc[2].calculaPerimetro());
-	System.out.println(calc[3].calculaPerimetro());
-	System.out.println(calc[4].calculaPerimetro());
+	i = 0;
+	while(i<calc.length) {
+	System.out.println(calc[i].calculaPerimetro());
+	i++;
+	}
 	}
 
 }
