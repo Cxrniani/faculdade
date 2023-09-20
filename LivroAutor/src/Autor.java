@@ -12,7 +12,7 @@ public class Autor {
 			this.email = email;
 		}
 		else {
-			this.email = null;;
+			this.email = null;
 		}		
 	}
 
