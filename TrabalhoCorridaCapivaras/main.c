@@ -38,7 +38,6 @@ int main()
                 else
                 {
                     capi[i].ultrapass++;
-                    // trocando as capivas de lugar com base na ordem de chegada utilizando um selection sort;
                     aux[i] = capi[i];
                     capi[i] = capi[i - 1];
                     capi[i - 1] = aux[i];
